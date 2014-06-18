@@ -3,8 +3,8 @@
 # Marco André <marcoandre@gmail.com>
 # Lista de exercícios 5
 
-# Exercícios sem for, apenas com while e sem funções embutidas.
-# Você pode utilizar funções já desenvolvidas em outros exercícios
+# Utilizar for sempre que possível
+# Utilizar "for i, item in enumerate(item) sempre que possível
 
 def palindrome(texto):
     '''Faça uma função que verifique se uma textro passado é palíndrome,
@@ -23,9 +23,6 @@ def encontra_caracter(texto, caracter):
     '''Receba um texto e retorne a localização da primeira vez que 
     aparece o caracter especificado'''
 
-def é_sortudo(numero):
-    '''um número é sortudo se ele contém o dígito 2 mas não o dígito 7.'''
-
 def numeros_sortudos(limite_inferior=1, limite_superior=100000):
     ''' Daniela é uma pessoa muito supersticiosa. Para ela, um número é 
     sortudo se ele contém o dígito 2 mas não o dígito 7. 
@@ -35,19 +32,6 @@ def numeros_sortudos(limite_inferior=1, limite_superior=100000):
     Dica: faça uma função de validação e outra que a chama e 
     verifica o intervalo dado
     '''
-def é_azarado(numero):
-    '''O último dígito não pode ser igual ao primeiro, porque isso dá azar
-    '''
-    
-def soma_é_par(numero):
-    '''A soma dos dígitos tem que ser par, porque isso é legal;
-    '''
-
-def é_chato(numero):
-    '''Não pode haver dois dígitos consecutivos idênticos, porque isso é chato.'''
-
-def é_número_válido(numero):
-    '''Um número é válido se não é azarado, a soma é par e não é chato.'''
 
 def ponteironuloville(telefones):
     '''Na pacata vila campestre de Ponteironuloville, todos os telefones 
@@ -132,36 +116,8 @@ def main():
     test(encontra_caracter("19/05/2014","/"), 2)
     test(encontra_caracter("19/05/2014","."), None)
 
-    print(' É sortudo:')
-    test(é_sortudo(2), True)
-    test(é_sortudo(7), False)
-    test(é_sortudo(27), False)
-    test(é_sortudo(72), False)
-    test(é_sortudo(35), False)
-    test(é_sortudo(37), False)
-    test(é_sortudo(21), True)
-
     print(' Números sortudos:')
     test(numeros_sortudos(18644,33087), 7995)
-
-    print(' É azarado:')
-    test(é_azarado('213452'), True)
-    test(é_azarado('213451'), False)
-
-    print(' A soma é par:')
-    test(soma_é_par('222222'), True)
-    test(soma_é_par('222221'), False)
-
-    print(' É chato:')
-    test(é_chato('223456'), True)
-    test(é_chato('122345'), True)
-    test(é_chato('123455'), True)
-    test(é_chato('123456'), False)
-
-    print(' É número válido:')
-    test(é_número_válido('123456'), False)
-    test(é_número_válido('113456'), False)
-    test(é_número_válido('213452'), False)
 
     print(' Ponteironuloville:')
     telefones = ['91775523', '88032828']
